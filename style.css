@@ -1,0 +1,71 @@
+/* BlackFile link page. V2 token rule: one black for every surface, orange the only accent.
+   Fonts are served locally (no external requests, no cookies). All fonts SIL OFL 1.1. */
+@font-face { font-family: 'Bricolage'; src: url('fonts/BricolageGrotesque-VF.ttf') format('truetype'); font-weight: 200 800; font-stretch: 75% 100%; font-display: swap; }
+@font-face { font-family: 'Instrument Serif'; src: url('fonts/instrument-serif-400-italic.woff2') format('woff2'); font-style: italic; font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Plex Mono'; src: url('fonts/IBMPlexMono-Medium.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+
+:root {
+  --schwarz: #201E1B;
+  --linie: #3E3A35;
+  --papier: #F2EDE3;
+  --grau: #ABA498;
+  --signal: #FF5B24;
+  --sans: 'Bricolage', system-ui, sans-serif;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --mono: 'Plex Mono', ui-monospace, monospace;
+  --rand: 16px;
+  --breite: 640px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: var(--schwarz); -webkit-text-size-adjust: 100%; }
+body { background: var(--schwarz); color: var(--papier); font-family: var(--sans); font-size: 17px; line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column; }
+a { color: inherit; }
+a:focus-visible, .knopf:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; }
+.wrap { width: 100%; max-width: var(--breite); margin: 0 auto; padding: 0 var(--rand); }
+
+.kopf { display: flex; align-items: center; gap: 12px; padding: 24px 0 0; text-decoration: none; }
+.kopf .etikett { position: relative; display: grid; place-items: center; width: 52px; height: 34px; flex: none; background: var(--signal); color: var(--schwarz); font-weight: 800; font-stretch: 75%; font-size: 24px; line-height: 1; }
+.kopf .etikett::before { content: ''; position: absolute; inset: 3px; border: 1px solid currentColor; opacity: .5; }
+.kopf span { font-family: var(--mono); font-weight: 500; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; }
+
+.kicker { font-family: var(--mono); font-weight: 500; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--grau); }
+.kicker b { color: var(--signal); font-weight: 500; }
+
+.held { padding: 56px 0 40px; }
+.held h1 { margin-top: 18px; font-weight: 760; font-stretch: 86%; font-size: clamp(44px, 12vw, 76px); line-height: .98; letter-spacing: -.01em; }
+.held h1 em { display: block; font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--signal); font-size: 1.08em; line-height: .95; letter-spacing: -.01em; }
+.held p { margin-top: 22px; color: var(--papier); max-width: 34em; }
+
+.knoepfe { display: grid; gap: 12px; margin-top: 30px; }
+.knopf { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 56px; padding: 14px 18px; text-decoration: none; font-weight: 600; font-size: 18px; border: 2px solid var(--papier); border-radius: 6px; }
+.knopf.primaer { background: var(--signal); border-color: var(--signal); color: var(--schwarz); }
+.knopf svg { width: 22px; height: 22px; flex: none; }
+.knopf small { display: block; font-weight: 400; font-size: 14px; }
+.hinweis, .held .hinweis { margin-top: 14px; font-size: 16px; color: var(--grau); }
+
+.akte { border-top: 2px solid var(--linie); padding: 36px 0 8px; }
+.akte h2 { margin-top: 10px; font-weight: 760; font-stretch: 86%; font-size: 30px; line-height: 1.08; }
+.schritte { list-style: none; margin-top: 18px; }
+.schritte li { display: grid; grid-template-columns: 40px 1fr; align-items: first baseline; padding: 16px 0; border-top: 1px solid var(--linie); }
+.schritte li:last-child { border-bottom: 1px solid var(--linie); }
+.schritte .n { font-family: var(--serif); font-style: italic; font-size: 32px; line-height: 1; color: var(--signal); }
+.schritte b { display: block; font-weight: 650; }
+.schritte span { color: var(--grau); font-size: 16px; }
+.weiter { display: inline-block; margin-top: 18px; padding: 10px 0; font-weight: 650; color: var(--signal); text-decoration: none; border-bottom: 2px solid currentColor; }
+
+.fuss { margin-top: auto; padding: 48px 0 32px; font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--grau); }
+.fuss nav { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 12px; }
+.fuss a { text-decoration: none; padding: 8px 0; }
+.fuss a:hover { color: var(--papier); }
+
+/* Legal pages */
+.recht { padding: 40px 0 0; }
+.recht h1 { margin-top: 14px; font-weight: 760; font-stretch: 86%; font-size: 40px; line-height: 1.05; }
+.recht h2 { margin-top: 32px; font-weight: 650; font-size: 20px; line-height: 1.25; }
+.recht p, .recht li { margin-top: 10px; color: var(--papier); font-size: 16px; }
+.recht ul { padding-left: 20px; }
+.recht .stand { margin-top: 32px; color: var(--grau); font-size: 14px; }
+.zurueck { display: inline-block; margin-top: 8px; font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--grau); text-decoration: none; padding: 8px 0; }
+
+@media (min-width: 720px) { .held p:not(.hinweis) { font-size: 20px; } .held { padding-top: 80px; } }
+@media (prefers-reduced-motion: no-preference) { .knopf { transition: transform .15s ease; } .knopf:hover { transform: translateY(-1px); } }

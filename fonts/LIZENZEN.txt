@@ -1,0 +1,6 @@
+Schriften dieser Seite, alle lizenziert unter der SIL Open Font License 1.1
+(Volltext: https://openfontlicense.org/open-font-license-official-text/)
+
+Bricolage Grotesque  - Copyright 2022 The Bricolage Grotesque Project Authors (https://github.com/ateliertriay/bricolage)
+Instrument Serif     - Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)
+IBM Plex Mono        - Copyright 2017 IBM Corp., Reserved Font Name "Plex" (https://github.com/IBM/plex)
